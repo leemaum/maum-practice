@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>web1-JavaScript</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="keywords" content="키워드넣기" />
+    <meta name="description" content="설명넣기" />
+    <meta name="author" content="저자넣기" />
+    <script>
+        function handler(){
+            if(this.value === "night"){
+                document.querySelector('body').backgroundColor("white");
+                document.querySelector('body').color("black");
+                document.querySelector('body').value("day");
+            }else{
+                document.querySelector('body').backgroundColor("black");
+                document.querySelector('body').color("white");
+                document.querySelector('body').value("night");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1><a href="#">WEB</a></h1>
+    <input type="button" value="night" onclick="handler();">
+    <ol>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ol>
+    <h2>JavaScript</h2>
+    <p>
+        Nowadays almost all web pages contain JavaScript, a scripting programming language that runs on visitor's web browser. It makes web pages functional for specific purposes and if disabled for some reason, the content or the functionality of the web page can be limited or unavailable. Here you can find instructions on how to enable (activate) JavaScript in five most commonly used browsers.
+    </p>
+</body>
+
+</html>
