@@ -10,46 +10,44 @@
     <meta name="description" content="설명넣기" />
     <meta name="author" content="저자넣기" />
     <script>
-        var Links = {
-            setColor: function(color) {
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = color;
-                    i++;
-                }
-            }
-        }
         var Body = {
-            setColor: function(color) {
-                document.querySelector('body').style.color = color;
-            },
-            setBackgroundColor: function(color) {
-                document.querySelector('body').style.backgroundColor = color;
+            setBackgroundColor:function(color){
+            document.querySelector('body').style.backgroundColor=color;
+             },
+             setColor:function(color){
+            document.querySelector('body').style.color=color;
+             }
+        }
+        var Links = {
+            setColor:function(color){
+                var alist = document.querySelectorAll('a');
+               var i = 0;
+                while (i < alist.length){
+                    alist[i].style.color = color;
+                     i++;
+                 }
             }
         }
-
-
-        function nightDayHandler(self) {
-            if (self.value === 'night') {
-                Body.setBackgroundColor('black');
-                Body.setColor('white');
-                Links.setColor('skyblue');
-                self.value = 'day';
-
-            } else {
-                Body.setBackgroundColor('white');
-                Body.setColor('black');
-                Links.setColor('blue');
-                self.value = 'night';
-            }
+        function handler(self){
+        if(self.value === 'night'){
+            Body.setBackgroundColor('black');
+            Body.setColor('white');
+            Links.setColor('skyblue');
+            self.value = 'day';
+        }
+        else{
+            Body.setBackgroundColor('white');
+            Body.setColor('black');            
+            Links.setColor('blue');
+            self.value = 'night';  
+        }
         }
     </script>
 </head>
 
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input type="button" value="night" onclick="nightDayHandler(this)">
+    <input type="button" value="night" onclick="handler(this);">
     <ol>
         <li><a href="1.html">HTML</a></li>
         <li><a href="2.html">CSS</a></li>
