@@ -9,24 +9,12 @@
     <meta name="keywords" content="키워드넣기" />
     <meta name="description" content="설명넣기" />
     <meta name="author" content="저자넣기" />
-    <script>
-        function handler(){
-            if(this.value === "night"){
-                document.querySelector('body').backgroundColor("white");
-                document.querySelector('body').color("black");
-                document.querySelector('body').value("day");
-            }else{
-                document.querySelector('body').backgroundColor("black");
-                document.querySelector('body').color("white");
-                document.querySelector('body').value("night");
-            }
-        }
-    </script>
+    <script src="colors.js"></script>
 </head>
 
 <body>
     <h1><a href="#">WEB</a></h1>
-    <input type="button" value="night" onclick="handler();">
+    <input type="button" value="night" onclick="handler(this);">
     <ol>
         <li><a href="#">HTML</a></li>
         <li><a href="#">CSS</a></li>
